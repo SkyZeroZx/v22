@@ -1,4 +1,23 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, Injectable, Service } from '@angular/core';
+
+// @Service is equivalent...
+@Service()
+class MyServiceService {
+  // Valid
+  private thingInject = inject(HttpClient);
+
+  // Comment back in to get build error
+  // constructor(private thingConstructor: HttpClient) {}
+}
+
+// ... to this
+@Injectable({
+  providedIn: 'root',
+})
+class MyServiceInjectable {
+  constructor() {}
+}
 
 @Component({
   selector: 'app-service',
@@ -30,7 +49,7 @@ import { Component } from '@angular/core';
         >
       </p>
     </div>
-    <p>TODO - example</p>
+    <p>See the @Service and @Injectable examples in this component's code for examples</p>
   `,
 })
 export class ServiceExample {}
