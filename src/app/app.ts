@@ -4,10 +4,11 @@ import { SignalForms } from './topics/signal-forms';
 import { ServiceExample } from './topics/service';
 import { Resources } from './topics/resources';
 import { Debounced } from './topics/debounced';
+import { InjectAsync } from './topics/injectAsync';
 
 @Component({
   selector: 'app-root',
-  imports: [AngularAria, SignalForms, ServiceExample, Resources, Debounced],
+  imports: [AngularAria, SignalForms, ServiceExample, Resources, Debounced, InjectAsync],
   template: `
     <h1>v22</h1>
 
@@ -25,6 +26,9 @@ import { Debounced } from './topics/debounced';
 
     <h2>debounced</h2>
     <app-debounced />
+
+    <h2>injectAsync</h2>
+    <app-injectAsync />
   `,
 })
 export class App {}
