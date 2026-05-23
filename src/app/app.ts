@@ -5,10 +5,19 @@ import { ServiceExample } from './topics/service';
 import { Resources } from './topics/resources';
 import { Debounced } from './topics/debounced';
 import { InjectAsync } from './topics/injectAsync';
+import { SafeNavigationAndNullishCoalescing } from './topics/safe-navigation-and-nullish-coalescing';
 
 @Component({
   selector: 'app-root',
-  imports: [AngularAria, SignalForms, ServiceExample, Resources, Debounced, InjectAsync],
+  imports: [
+    AngularAria,
+    SignalForms,
+    ServiceExample,
+    Resources,
+    Debounced,
+    InjectAsync,
+    SafeNavigationAndNullishCoalescing,
+  ],
   template: `
     <h1>v22</h1>
 
@@ -29,6 +38,9 @@ import { InjectAsync } from './topics/injectAsync';
 
     <h2>injectAsync</h2>
     <app-injectAsync />
+
+    <h2>Safe Navigation and Nullish Coalescing in templates aligning with TS spec</h2>
+    <app-safe-navigation-and-nullish-coalescing />
   `,
 })
 export class App {}
