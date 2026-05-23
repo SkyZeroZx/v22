@@ -23,7 +23,7 @@ import { Debounced } from './topics/debounced';
     <h2>Resources: Stable</h2>
     <app-resources />
 
-    <h2>Debounced</h2>
+    <h2>debounced</h2>
     <app-debounced />
   `,
 })
