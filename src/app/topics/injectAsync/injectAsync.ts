@@ -1,7 +1,9 @@
 import { Component, injectAsync } from '@angular/core';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-injectAsync',
+  imports: [MarkdownModule],
   template: `
     <p>TODO - point to live v22 documentation, also for citation</p>
     <p>
@@ -10,24 +12,7 @@ import { Component, injectAsync } from '@angular/core';
       >
     </p>
 
-    <div>
-      <blockquote cite="https://next.angular.dev/guide/di/lazy-loading-services#">
-        Angular's injectAsync function lets you load a service on demand, only when it's actually
-        needed. This is useful when a service depends on a large library or rarely used feature, and
-        you don't want to pay for it on the initial page load. When you use injectAsync, the
-        service's code is split out by your bundler into a separate JavaScript chunk and downloaded
-        the first time you ask for the instance. Once loaded, Angular resolves the service through
-        the regular DI system, so it can still depend on other injectables and behaves like any
-        other singleton.
-      </blockquote>
-      <p>
-        <cite
-          ><a href="https://next.angular.dev/guide/di/lazy-loading-services#" target="_blank"
-            >Doc example</a
-          ></cite
-        >
-      </p>
-    </div>
+    <markdown [data]="quoteDefinition" />
 
     <p>
       Docs: "Imagine a ReportExporter that depends on a heavy spreadsheet library. Most users open
@@ -45,4 +30,12 @@ export class InjectAsync {
     const exporter = await this.exporter();
     exporter.export();
   }
+
+  protected quoteDefinition = `> Angular's \`injectAsync\` function lets you load a service on demand, only when it's actually
+        needed. This is useful when a service depends on a large library or rarely used feature, and
+        you don't want to pay for it on the initial page load. When you use injectAsync, the
+        service's code is split out by your bundler into a separate JavaScript chunk and downloaded
+        the first time you ask for the instance. Once loaded, Angular resolves the service through
+        the regular DI system, so it can still depend on other injectables and behaves like any
+        other singleton. - [Docs](https://next.angular.dev/guide/di/lazy-loading-services#)`;
 }
