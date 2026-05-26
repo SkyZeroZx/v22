@@ -5,8 +5,8 @@ import { ServiceExample } from './topics/service/service';
 import { Resources } from './topics/resources/resources';
 import { Debounced } from './topics/debounced/debounced';
 import { InjectAsync } from './topics/injectAsync/injectAsync';
-import { SafeNavigationAndNullishCoalescing } from './topics/safe-navigation-and-nullish-coalescing';
 import { CommentsInHtmlElement } from './topics/comments-in-html-element';
+import { SafeNavigationAlignedWithTS } from './topics/safe-navigation-aligned-with-ts/safe-navigation-aligned-with-ts';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +17,8 @@ import { CommentsInHtmlElement } from './topics/comments-in-html-element';
     Resources,
     Debounced,
     InjectAsync,
-    SafeNavigationAndNullishCoalescing,
     CommentsInHtmlElement,
+    SafeNavigationAlignedWithTS,
   ],
   template: `
     <h1>v22</h1>
@@ -42,7 +42,7 @@ import { CommentsInHtmlElement } from './topics/comments-in-html-element';
     <app-injectAsync />
 
     <h2>Safe Navigation and Nullish Coalescing in templates aligning with TS spec</h2>
-    <app-safe-navigation-and-nullish-coalescing />
+    <app-safe-navigation-aligned-with-ts />
 
     <h2>Comments in HTML elements</h2>
     <app-comments-in-html-element />
