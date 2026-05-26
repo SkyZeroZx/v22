@@ -7,7 +7,17 @@ import { delay, of } from 'rxjs';
 @Component({
   selector: 'app-debounced',
   imports: [MarkdownModule, CommonModule],
-  templateUrl: './debounced.html',
+  template: `
+    <markdown [src]="'/debounced/example-block.md'" ngPreserveWhitespaces />
+
+    <input (input)="query.set($event.target.value)" />
+    @if (results.isLoading()) {
+      <p>Searching…</p>
+    }
+    @for (item of results.value(); track item) {
+      <li>{{ item }}</li>
+    }
+  `,
   preserveWhitespaces: true,
 })
 export class Debounced {
