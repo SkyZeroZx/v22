@@ -23,28 +23,28 @@ import { SafeNavigationAlignedWithTS } from './topics/safe-navigation-aligned-wi
   template: `
     <h1>v22</h1>
 
-    <h2>Angular Aria package (<code>@angular/aria</code>): Stable</h2>
-    <app-angular-aria />
-
     <h2>Signal Forms package: Stable</h2>
     <app-signal-forms />
 
-    <h2>Service decorator</h2>
+    <h2>Angular Aria package (<code>@angular/aria</code>): Stable</h2>
+    <app-angular-aria />
+
+    <h2>Service decorator: Stable</h2>
     <app-service />
 
     <h2>Resources: Stable</h2>
     <app-resources />
 
-    <h2>debounced</h2>
+    <h2>debounced: Stable</h2>
     <app-debounced />
 
-    <h2>injectAsync</h2>
+    <h2>injectAsync: Stable</h2>
     <app-injectAsync />
 
-    <h2>Safe Navigation and Nullish Coalescing in templates aligning with TS spec</h2>
+    <h2>Safe Navigation and Nullish Coalescing in templates aligning with TS spec: Stable</h2>
     <app-safe-navigation-aligned-with-ts />
 
-    <h2>Comments in HTML elements</h2>
+    <h2>Comments in HTML elements: Stable</h2>
     <app-comments-in-html-element />
   `,
 })
