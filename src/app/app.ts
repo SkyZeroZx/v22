@@ -7,6 +7,7 @@ import { Debounced } from './topics/debounced/debounced';
 import { InjectAsync } from './topics/injectAsync/injectAsync';
 import { CommentsInHtmlElement } from './topics/comments-in-html-element';
 import { SafeNavigationAlignedWithTS } from './topics/safe-navigation-aligned-with-ts/safe-navigation-aligned-with-ts';
+import { DeferIdle } from './topics/defer-idle/defer-idle';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { SafeNavigationAlignedWithTS } from './topics/safe-navigation-aligned-wi
     InjectAsync,
     CommentsInHtmlElement,
     SafeNavigationAlignedWithTS,
+    DeferIdle,
   ],
   template: `
     <h1>v22</h1>
@@ -46,6 +48,9 @@ import { SafeNavigationAlignedWithTS } from './topics/safe-navigation-aligned-wi
 
     <h2>Comments in HTML elements: Stable</h2>
     <app-comments-in-html-element />
+
+    <h2>&#64;defer idle timeout + DI token (<code>IdleService</code> / <code>provideIdleServiceWith</code>): Stable</h2>
+    <app-defer-idle />
   `,
 })
 export class App {}
