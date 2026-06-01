@@ -12,6 +12,7 @@ import { DeferTriggerMisconfiguration } from './topics/defer-trigger-misconfigur
 import { EnableProfiling } from './topics/enable-profiling/enable-profiling';
 import { BrowserUrl } from './topics/browser-url/browser-url';
 import { V21Minors } from './topics/v21-minors/v21-minors';
+import { OnPushDefultCD } from './topics/OnPush-default';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +30,7 @@ import { V21Minors } from './topics/v21-minors/v21-minors';
     EnableProfiling,
     BrowserUrl,
     V21Minors,
+    OnPushDefultCD,
   ],
   template: `
     <h1>v22</h1>
@@ -41,6 +43,9 @@ import { V21Minors } from './topics/v21-minors/v21-minors';
 
     <h2>Angular Aria package (<code>@angular/aria</code>): Stable</h2>
     <app-angular-aria />
+
+    <h2>OnPush Default Change Detection</h2>
+    <app-on-push-defult-cd />
 
     <h2>Service decorator: Stable</h2>
     <app-service />
