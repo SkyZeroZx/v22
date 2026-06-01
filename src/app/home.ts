@@ -11,6 +11,7 @@ import { DeferIdle } from './topics/defer-idle/defer-idle';
 import { DeferTriggerMisconfiguration } from './topics/defer-trigger-misconfiguration/defer-trigger-misconfiguration';
 import { EnableProfiling } from './topics/enable-profiling/enable-profiling';
 import { BrowserUrl } from './topics/browser-url/browser-url';
+import { V21Minors } from './topics/v21-minors/v21-minors';
 
 @Component({
   selector: 'app-home',
@@ -27,9 +28,13 @@ import { BrowserUrl } from './topics/browser-url/browser-url';
     DeferTriggerMisconfiguration,
     EnableProfiling,
     BrowserUrl,
+    V21Minors,
   ],
   template: `
     <h1>v22</h1>
+
+    <h2>v21.1 and v21.2 recap</h2>
+    <app-v21-minors />
 
     <h2>Signal Forms package: Stable</h2>
     <app-signal-forms />
@@ -55,7 +60,10 @@ import { BrowserUrl } from './topics/browser-url/browser-url';
     <h2>Comments in HTML elements: Stable</h2>
     <app-comments-in-html-element />
 
-    <h2>&#64;defer idle timeout + DI token (<code>IdleService</code> / <code>provideIdleServiceWith</code>): Stable</h2>
+    <h2>
+      &#64;defer idle timeout + DI token (<code>IdleService</code> /
+      <code>provideIdleServiceWith</code>): Stable
+    </h2>
     <app-defer-idle />
 
     <h2>&#64;defer trigger misconfiguration diagnostics</h2>
