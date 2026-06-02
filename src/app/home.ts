@@ -38,31 +38,31 @@ import { OnPushDefultCD } from './topics/OnPush-default';
     <h2>v21.1 and v21.2 recap</h2>
     <app-v21-minors />
 
-    <h2>Signal Forms package: Stable</h2>
+    <h2>Signal Forms: Stable</h2>
     <app-signal-forms />
 
     <h2>Angular Aria package (<code>@angular/aria</code>): Stable</h2>
     <app-angular-aria />
 
-    <h2>OnPush Default Change Detection</h2>
-    <app-on-push-defult-cd />
-
-    <h2>Service decorator: Stable</h2>
-    <app-service />
-
     <h2>Resources: Stable</h2>
     <app-resources />
 
-    <h2>debounced: Stable</h2>
+    <h2><code>OnPush</code> Default Change Detection is the new default</h2>
+    <app-on-push-defult-cd />
+
+    <h2>Service decorator</h2>
+    <app-service />
+
+    <h2><code>debounced</code></h2>
     <app-debounced />
 
-    <h2>injectAsync: Stable</h2>
+    <h2><code>injectAsync</code></h2>
     <app-injectAsync />
 
-    <h2>Safe Navigation and Nullish Coalescing in templates aligning with TS spec: Stable</h2>
+    <h2>Safe Navigation in templates aligning with TS spec: Stable</h2>
     <app-safe-navigation-aligned-with-ts />
 
-    <h2>Comments in HTML elements: Stable</h2>
+    <h2>Comments in HTML elements</h2>
     <app-comments-in-html-element />
 
     <h2>
