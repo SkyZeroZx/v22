@@ -9,7 +9,7 @@ import { delay, of } from 'rxjs';
   template: `
     <markdown [src]="'/debounced/example-block.md'" ngPreserveWhitespaces />
 
-    <input (input)="query.set($event.target.value)" />
+    <label>Query <input (input)="query.set($event.target.value)" /></label>
     @if (results.isLoading()) {
       <p>Searching…</p>
     }
